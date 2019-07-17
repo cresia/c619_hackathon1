@@ -5,13 +5,17 @@ var random;
 function initializeApp() {
   player1 = new Human();
   var buttonDice = $("<button>").addClass("dice").text("Dice").css({ "width": "30px", "height": "30px" });
-  buttonDice.on("click",rollDice);
-  console.log(buttonDice.on("click", rollDice));
-  buttonDice.text(random);
   $("body").append(buttonDice);
+  buttonDice.click(rollDice);
 }
 
 function rollDice(){
   random = Math.floor(Math.random() * 6 + 1);
-  return random;
+  displayDice();
+}
+
+function displayDice() {
+  var randomNumber = $("#randomNum").text(random);
+  randomNumber.css({"width":"50px","height":"50px","background-color":"orange"});
+  $("body").append(randomNumber);
 }
