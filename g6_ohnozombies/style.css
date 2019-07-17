@@ -103,3 +103,6 @@ width:8vw;
 position: absolute;
 margin-top:10px;
 } */
+#randomNum {
+  position:relative;
+}
