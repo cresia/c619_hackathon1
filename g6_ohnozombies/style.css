@@ -19,6 +19,13 @@ aside {
 
 }
 
+/*
+.dice{
+  position:absolute;
+  padding: 1%;
+  margin-top:2%;
+}
+ */
 
 .box{
   /* border: solid black 1px; */
@@ -84,6 +91,7 @@ visibility:hidden;
 width:50%;
 height:50%;
 position: absolute;
+margin: auto;
 left: 25%;
 top: 25%;
 }
