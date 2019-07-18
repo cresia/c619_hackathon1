@@ -27,10 +27,10 @@ function initializeApp() {
   var buttonMoveDown = $("#moveDown");
   var buttonMoveLeft = $("#moveLeft");
   var buttonMoveRight = $("#moveRight");
-  $(".sideList").append(buttonMoveUp);
-  $(".sideList").append(buttonMoveDown);
-  $(".sideList").append(buttonMoveLeft);
-  $(".sideList").append(buttonMoveRight);
+  $(".mainCards").append(buttonMoveUp);
+  $(".mainCards").append(buttonMoveDown);
+  $(".mainCards").append(buttonMoveLeft);
+  $(".mainCards").append(buttonMoveRight);
   buttonMoveUp.click(displayPositionUp);
   buttonMoveDown.click(displayPositionDown);
   buttonMoveLeft.click(displayPositionLeft);

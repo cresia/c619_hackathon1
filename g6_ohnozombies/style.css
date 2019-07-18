@@ -1,7 +1,8 @@
-/* body{
-height: 100%;
-width: 100%;
-} */
+body{
+  background-image: url("https://ak6.picdn.net/shutterstock/videos/30577486/thumb/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 aside {
@@ -10,29 +11,42 @@ aside {
 }
 
 .sideList{
-  border: solid black 2px;
+  border: solid orange 2px;
   padding: 2%;
   display: inline-block;
   width: 20vw;
   text-align: center;
   margin-top:20%;
+  margin-left:10%;
 
 }
 
-/*
+
 .dice{
-  position:absolute;
-  padding: 1%;
-  margin-top:2%;
+ background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+
 }
- */
+
 
 .box{
   /* border: solid black 1px; */
   padding: 5%;
   margin-bottom: 5%;
-  margin-right:5%;
+  margin-right:3%;
   background-color:lightskyblue;
+  opacity: 0.8;
+  margin-left:2%;
+
 }
 
 
@@ -42,21 +56,12 @@ aside {
 display: inline-block;
 height:7vh;
 width:6vw;
-background-color:blue;
+/* background-color:orange; */
+background-image: url("https://img1.picmix.com/output/stamp/normal/3/6/7/6/1186763_10d73.gif");
 margin-top:2%;
 margin-left: 1%;
 position:relative;
 
-
-/* display: inline-block;
-height:8vh;
-width:6vw;
-background-color:blue;
-margin-top:20px;
-margin-left: 20px;
-position:relative; */
-/* border-radius: 10px; */
-/* margin-right:15px; */
 }
 
 
@@ -75,7 +80,9 @@ position:relative; */
 display: inline-block;
 height:7vh;
 width:6vw;
-background-color:blue;
+/* background-color:brown; */
+background-image: url("https://media.giphy.com/media/uxNh6BemigCHu/giphy.gif");
+
 margin-top:2%;
 margin-left: 1%;
 position:relative;
@@ -91,19 +98,40 @@ visibility:hidden;
 width:50px;
 height:50px;
 position: absolute;
-/* margin: auto; */
+margin: auto;
 left: 25%;
 top: 25%;
 background-size: contain;
-z-index: 1;
-display: inline;
-background-image: url("https://image.freepik.com/free-vector/cartoon-african-boy-walking_61103-294.jpg")
+/* z-index: 1; */
+/* display: inline; */
+background-image: url("https://thumbs.gfycat.com/BigheartedTanHairstreak-small.gif");
+border:none;
+
 }
+
+.human2{
+width:50px;
+height:50px;
+position: absolute;
+margin: auto;
+background-size: contain;
+background-image: url("https://www.dullmensclub.com/new/wp-content/uploads/2018/12/8iGb9kxrT.gif");
+}
+
+button{
+  margin-left:2%;
+  margin-top: 2%;
+  font-weight: bold;
+  
+}
+
+
+
 
 .zombie1{
 width:50px;
 height:50px;
-position: relative;
+position: absolute;
 margin: auto;
 left: 25%;
 top: 25%;
@@ -113,7 +141,7 @@ background-size: contain;
 .zombie2{
 width:50px;
 height:50px;
-position: relative;
+position: absolute;
 margin: auto;
 left: 25%;
 top: 25%;
@@ -123,20 +151,19 @@ background-size: contain;
 .zombie3{
 width:50px;
 height:50px;
-position: relative;
+position: absolute;
 margin: auto;
 left: 25%;
 top: 25%;
 background-size: contain;
 }
 
-/*
-.battreyBox{
-height:10vh;
-width:8vw;
-position: absolute;
-margin-top:10px;
-} */
+
 #randomNum {
   position:relative;
+}
+
+
+h1{
+  color: white;
 }
