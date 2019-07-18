@@ -88,12 +88,46 @@ visibility:hidden;
 }
 
 .human{
-width:50%;
-height:50%;
+width:50px;
+height:50px;
 position: absolute;
+/* margin: auto; */
+left: 25%;
+top: 25%;
+background-size: contain;
+z-index: 1;
+display: inline;
+background-image: url("https://image.freepik.com/free-vector/cartoon-african-boy-walking_61103-294.jpg")
+}
+
+.zombie1{
+width:50px;
+height:50px;
+position: relative;
 margin: auto;
 left: 25%;
 top: 25%;
+background-size: contain;
+}
+
+.zombie2{
+width:50px;
+height:50px;
+position: relative;
+margin: auto;
+left: 25%;
+top: 25%;
+background-size: contain;
+}
+
+.zombie3{
+width:50px;
+height:50px;
+position: relative;
+margin: auto;
+left: 25%;
+top: 25%;
+background-size: contain;
 }
 
 /*
