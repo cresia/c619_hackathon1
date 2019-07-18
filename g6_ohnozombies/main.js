@@ -1,7 +1,12 @@
 $(document).ready(initializeApp);
 var player1;
 var random;
-var current = 0;
+var current = 3;
+
+var arrayBigleftRight1 = [];
+var arrayBigLeftRight2 = [];
+
+
 var position = [
   ".pos32",
   ".pos23",
@@ -31,9 +36,11 @@ function initializeApp() {
   var buttonDice = $(".dice")
   $(".boxDice").append(buttonDice);
   buttonDice.click(rollDice);
-  var buttonMove = $("<button>").addClass("movement").text("Move").css({ "width": "30px", "height": "30px" });
-  $("body").append(buttonMove);
-  buttonMove.click(displayPosition);
+  var buttonMoveUp = $("#moveUp");
+  var buttonMoveDown = $("#moveDown")
+  $(".sideList").append(buttonMoveUp);
+  buttonMoveUp.click(displayPosition);
+  buttonMoveDown.click(displayPositionDown)
   console.log(position.length);
 }
 
@@ -48,19 +55,133 @@ function displayDice() {
   $("#randomNum").append(randomNumber);
 }
 
-function displayPosition() {
-  $("body").append($(".human").hide());
-  var human = $(".human").css("display", "inline");
-  switch(current){
-    case 0:
-      $(position[current]).append(human);
-      current = 1;
-      break;
-    case 1:
-      $(position[current]).append(human);
-      break;
+// function displayPosition() {
+//   $("body").append($(".human").hide());
+//   var human = $(".human").css("display", "inline");
+//   switch(current){
+
+//     case 11:
+//       $(position[current]).append(human);
+//       human.off("click");
+//       current = 12;
+//       break;
+//     case 12:
+//       $(position[current]).append(human);
+//       current = 13;
+//       break;
+//     case 13:
+//       $(position[current]).append(human);
+//       current = 14;
+//       break;
+//     case 14:
+//       $(position[current]).append(human);
+//       current = 15;
+//       break;
+//     case 9:
+//       $(position[current]).append(human);
+//       current = 18;
+//       break;
+//     case 18:
+//       $(position[current]).append(human);
+//       current = 16;
+//       break;
+//     case 16:
+//       $(position[current]).append(human);
+//       current = 0;
+//       break;
+//     case 0:
+//       $(position[current]).append(human);
+//       current = 1;
+//       break;
+//     case 7:
+//       $(position[current]).append(human);
+//       current = 6;
+//       break;
+//     case 6:
+//       $(position[current]).append(human);
+//       current = 5;
+//       break;
+//     case 5:
+//       $(position[current]).append(human);
+//       current = 4;
+//       break;
+//     case 4:
+//       $(position[current]).append(human);
+//       current = 3;
+//       break;
+
+
+    // case 19:
+    //   $(position[current]).append(human);
+    //   buttonMoveUp.off("click");
   }
   // var human = $(".human").css("display","inline");
   // console.log(human);
   // $(position[current]).append(human);
 }
+
+
+
+// function displayPositionDown() {
+//   $("body").append($(".human").hide());
+//   var human = $(".human").css("display", "inline");
+//   switch (current) {
+
+//     case 12:
+//       $(position[current]).append(human);
+//       human.off("click");
+//       current = 11;
+//       break;
+//     case 13:
+//       $(position[current]).append(human);
+//       current = 12;
+//       break;
+//     case 14:
+//       $(position[current]).append(human);
+//       current = 13;
+//       break;
+//     case 15:
+//       $(position[current]).append(human);
+//       current = 14;
+//       break;
+//     case 18:
+//       $(position[current]).append(human);
+//       current = 9;
+//       break;
+//     case 16:
+//       $(position[current]).append(human);
+//       current = 18;
+//       break;
+//     case 0:
+//       $(position[current]).append(human);
+//       current = 16;
+//       break;
+//     case 1:
+//       $(position[current]).append(human);
+//       current = 0;
+//       break;
+//     case 6:
+//       $(position[current]).append(human);
+//       current = 7;
+//       break;
+//     case 5:
+//       $(position[current]).append(human);
+//       current = 6;
+//       break;
+//     case 4:
+//       $(position[current]).append(human);
+//       current = 5;
+//       break;
+//     case 3:
+//       $(position[current]).append(human);
+//       current = 4;
+//       break;
+
+    // case 19:
+    //   $(position[current]).append(human);
+    //   buttonMoveUp.off("click");
+ //}
+  // var human = $(".human").css("display","inline");
+  // console.log(human);
+  // $(position[current]).append(human);
+//}

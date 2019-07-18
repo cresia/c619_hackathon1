@@ -2,6 +2,7 @@ class Human {
   constructor() {
     this.step = 0;
     this.item = [];
+    this.battery1 = false;
   }
   setStep(step){
     this.step = step;
