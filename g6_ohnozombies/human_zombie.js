@@ -3,12 +3,21 @@ class Human {
     this.step = 0;
     this.item = [];
     this.battery1 = false;
+    this.turn = false;
   }
   setStep(step) {
     this.step = step;
+
   }
   getStep() {
     return this.step;
+  }
+
+  // setTurn(turn){
+  //   this.turn = turn;
+  // }
+  getTurn(){
+    return this.turn;
   }
 }
 

@@ -11,7 +11,7 @@ aside {
 }
 
 .sideList{
-  border: solid orange 2px;
+  border: solid orange 4px;
   padding: 2%;
   display: inline-block;
   width: 20vw;
@@ -95,66 +95,71 @@ visibility:hidden;
 }
 
 .human{
-width:50px;
+width:60px;
 height:50px;
 position: absolute;
 margin: auto;
-left: 25%;
-top: 25%;
+left: 40%;
+top: 20%;
 background-size: contain;
 /* z-index: 1; */
 /* display: inline; */
 background-image: url("https://thumbs.gfycat.com/BigheartedTanHairstreak-small.gif");
-border:none;
+background-repeat: no-repeat;
+
 
 }
 
 .human2{
-width:50px;
-height:50px;
+width:60px;
+height:60px;
+left: 1%;
+top: 8%;
 position: absolute;
 margin: auto;
 background-size: contain;
 background-image: url("https://www.dullmensclub.com/new/wp-content/uploads/2018/12/8iGb9kxrT.gif");
+
 }
 
-button{
-  margin-left:2%;
-  margin-top: 2%;
+.allButtons{
+  margin-left:10%;
+  margin-top: 5%;
   font-weight: bold;
-  
+  width: 10%;
+  background-color: lightgoldenrodyellow;
+  border:solid darkred 4px;
+
 }
-
-
 
 
 .zombie1{
-width:50px;
-height:50px;
+width:60px;
+height:60px;
 position: absolute;
 margin: auto;
-left: 25%;
-top: 25%;
+left: 20%;
+top: 1%;
 background-size: contain;
 }
 
 .zombie2{
-width:50px;
-height:50px;
+width:60px;
+height:60px;
 position: absolute;
 margin: auto;
-left: 25%;
-top: 25%;
+left: 15%;
+top: 2%;
 background-size: contain;
 }
 
 .zombie3{
-width:50px;
-height:50px;
+width:70px;
+height:65px;
 position: absolute;
 margin: auto;
-left: 25%;
-top: 25%;
+left: 15%;
+top: 0.3%;
 background-size: contain;
 }
 

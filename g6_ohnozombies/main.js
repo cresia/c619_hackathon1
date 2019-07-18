@@ -2,6 +2,7 @@ $(document).ready(initializeApp);
 var player1;
 var random;
 var current = 30;
+var countStep = 0;
 
 var position = [
   ".pos1", ".pos2", ".pos3", ".pos4", ".pos5", ".pos6", ".pos7", ".pos8", ".pos9",
@@ -18,32 +19,77 @@ var position = [
 
 function initializeApp() {
   player1 = new Human();
+  player2 = new Human();
+
+
   var buttonDice = $(".dice")
   $(".boxDice").append(buttonDice);
   buttonDice.click(rollDice);
+
   var buttonMoveUp = $("#moveUp");
   var buttonMoveDown = $("#moveDown");
   var buttonMoveLeft = $("#moveLeft");
   var buttonMoveRight = $("#moveRight");
+
   $(".mainCards").append(buttonMoveUp);
   $(".mainCards").append(buttonMoveDown);
   $(".mainCards").append(buttonMoveLeft);
   $(".mainCards").append(buttonMoveRight);
-  buttonMoveUp.click(displayPositionUp);
-  buttonMoveDown.click(displayPositionDown);
-  buttonMoveLeft.click(displayPositionLeft);
-  buttonMoveRight.click(displayPositionRight);
-  console.log(position.length);
+
+
+//debugger;
+  // player1.setTurn(true);
+  player1.turn = true;
+
+  while(player1.turn){
+
+    buttonMoveUp.click(displayPositionUp);
+    buttonMoveDown.click(displayPositionDown);
+    buttonMoveLeft.click(displayPositionLeft);
+    buttonMoveRight.click(displayPositionRight);
+   // debugger;
+
+    // if(player1.getStep() === 0){
+    if(player1.step === 0) {
+
+      // player1.setTurn(false) ;
+      buttonMoveUp.off("click");
+      buttonMoveDown.off("click");
+      buttonMoveLeft.off("click");
+      buttonMoveRight.off("click");
+      player1.turn = false;
+    }
+
+    if(player1.turn === false){
+      // buttonMoveUp.off("click");
+      // buttonMoveDown.off("click");
+      // buttonMoveLeft.off("click");
+      // buttonMoveRight.off("click");
+
+    }
+
+
+  }
+
 }
+
 
 function rollDice() {
   random = Math.floor(Math.random() * 6 + 1);
+
+  if(player1.getStep() === 0){
+    player1.setStep(random);
+    var getPlayer1 = $("#player1DiceResult").text(player1.getStep());
+    $("#player1DiceResult").append(getPlayer1);
+
+
+  }
+ // console.log(player1.getStep());
   displayDice();
 }
 
 function displayDice() {
   var randomNumber = $("#randomNum").text(random);
-
   $("#randomNum").append(randomNumber);
 }
 
@@ -52,55 +98,42 @@ function displayPositionUp(event) {
 
   switch (current) {
     case 52:
-
       current = 48;
       break;
     case 48:
-
       current = 39;
       break;
     case 39:
-
       current = 34;
       break;
     case 34:
-
       current = 27;
       break;
     case 27:
-
       current = 22;
       break;
     case 22:
-
       current = 13;
       break;
     case 13:
-
       current = 9;
       break;
     case 9:
-
       current = 0;
       break;
     case 0:
-
       current = 0;
       break;
     case 54:
-
       current = 49;
       break;
     case 49:
-
       current = 41;
       break;
     case 41:
-
       current = 35;
       break;
     case 35:
-
       current = 28;
       break;
     case 28:
@@ -222,7 +255,9 @@ function displayPositionUp(event) {
   }
   $(".human").remove();
   var human = $("<img>").addClass("human lost");
-  $(position[current]).append(human)
+  $(position[current]).append(human);
+  movementSubtraction();
+
 }
 
 
@@ -403,7 +438,8 @@ function displayPositionDown() {
   }
   $(".human").remove();
   var human = $("<img>").addClass("human lost");
-  $(position[current]).append(human)
+  $(position[current]).append(human);
+  movementSubtraction()
 
 }
 
@@ -584,7 +620,8 @@ function displayPositionLeft() {
   }
   $(".human").remove();
   var human = $("<img>").addClass("human lost");
-  $(position[current]).append(human)
+  $(position[current]).append(human);
+  movementSubtraction()
 }
 
 
@@ -766,4 +803,23 @@ function displayPositionRight() {
   $(".human").remove();
   var human = $("<img>").addClass("human lost");
   $(position[current]).append(human)
+  movementSubtraction();
+}
+
+
+function movementSubtraction(){
+
+
+
+  if(player1.getStep () > 0){
+    player1.setStep(player1.getStep() - 1);
+    var getPlayer1 = $("#player1DiceResult").text(player1.getStep());
+    $("#player1DiceResult").append(getPlayer1);
+
+  }
+
+
+
+
+
 }
