@@ -53,11 +53,12 @@ function initializeApp() {
     if(player1.step === 0) {
 
       // player1.setTurn(false) ;
-      buttonMoveUp.off("click");
-      buttonMoveDown.off("click");
-      buttonMoveLeft.off("click");
-      buttonMoveRight.off("click");
+      // buttonMoveUp.off("click");
+      // buttonMoveDown.off("click");
+      // buttonMoveLeft.off("click");
+      // buttonMoveRight.off("click");
       player1.turn = false;
+
     }
 
     if(player1.turn === false){
@@ -71,7 +72,24 @@ function initializeApp() {
 
   }
 
+
 }
+
+function winCondition() {
+  if (position[current] === ".pos41" && player1.battery.length > 0) {
+    console.log("YOU WIN!");
+  }
+}
+
+function removeBattery() {
+  if ($(position[current]).hasClass("battery")) {
+    $(position[current]).removeClass("battery");
+    player1.battery.push("battery");
+  }
+}
+
+// $(position[current])
+// $(".pos1")
 
 
 function rollDice() {
@@ -95,10 +113,10 @@ function displayDice() {
 
 function displayPositionUp(event) {
   console.log("up", current, position[current], event.eventTarget);
-
   switch (current) {
     case 52:
       current = 48;
+      removeBattery();
       break;
     case 48:
       current = 39;
@@ -120,9 +138,11 @@ function displayPositionUp(event) {
       break;
     case 9:
       current = 0;
+      removeBattery();
       break;
     case 0:
       current = 0;
+      removeBattery();
       break;
     case 54:
       current = 49;
@@ -217,8 +237,8 @@ function displayPositionUp(event) {
 
 
     case 60:
-
       current = 51;
+      removeBattery();
       break;
     case 51:
 
@@ -245,18 +265,19 @@ function displayPositionUp(event) {
       current = 12;
       break;
     case 12:
-
       current = 8;
+      removeBattery();
       break;
     case 8:
-
       current = 8;
+      removeBattery();
       break;
   }
   $(".human").remove();
   var human = $("<img>").addClass("human lost");
   $(position[current]).append(human);
   movementSubtraction();
+  winCondition();
 
 }
 
@@ -268,8 +289,8 @@ function displayPositionDown() {
 
   switch (current) {
     case 0:
-
       current = 9;
+      removeBattery();
       break;
     case 9:
 
@@ -296,12 +317,12 @@ function displayPositionDown() {
       current = 48;
       break;
     case 48:
-
       current = 52;
+      removeBattery();
       break;
     case 52:
-
       current = 52;
+      removeBattery();
       break;
 
     case 2:
@@ -400,8 +421,8 @@ function displayPositionDown() {
       break;
 
     case 8:
-
       current = 12;
+      removeBattery();
       break;
     case 12:
 
@@ -428,18 +449,19 @@ function displayPositionDown() {
       current = 51;
       break;
     case 51:
-
       current = 60;
+      removeBattery();
       break;
     case 60:
-
       current = 60;
+      removeBattery();
       break;
   }
   $(".human").remove();
   var human = $("<img>").addClass("human lost");
   $(position[current]).append(human);
-  movementSubtraction()
+  movementSubtraction();
+  winCondition();
 
 }
 
@@ -472,8 +494,8 @@ function displayPositionLeft() {
       current = 28;
       break;
     case 8:
-
       current = 7;
+      removeBattery();
       break;
     case 7:
 
@@ -500,11 +522,11 @@ function displayPositionLeft() {
       current = 1;
       break;
     case 1:
-
       current = 0;
+      removeBattery();
       break;
     case 0:
-
+      removeBattery();
       current = 0;
       break;
 
@@ -582,8 +604,8 @@ function displayPositionLeft() {
       current = 39;
       break;
     case 60:
-
       current = 59;
+      removeBattery();
       break;
     case 59:
 
@@ -610,18 +632,19 @@ function displayPositionLeft() {
       current = 53;
       break;
     case 53:
-
       current = 52;
+      removeBattery();
       break;
     case 52:
-
       current = 52;
+      removeBattery();
       break;
   }
   $(".human").remove();
   var human = $("<img>").addClass("human lost");
   $(position[current]).append(human);
-  movementSubtraction()
+  movementSubtraction();
+  winCondition();
 }
 
 
@@ -632,8 +655,9 @@ function displayPositionRight() {
 
   switch (current) {
     case 0:
-
       current = 1;
+      removeBattery();
+
       break;
     case 1:
 
@@ -660,12 +684,12 @@ function displayPositionRight() {
       current = 7;
       break;
     case 7:
-
       current = 8;
+      removeBattery();
       break;
     case 8:
-
       current = 8;
+      removeBattery();
       break;
     case 13:
 
@@ -764,8 +788,8 @@ function displayPositionRight() {
 
 
     case 52:
-
       current = 53;
+      removeBattery();
       break;
     case 53:
 
@@ -792,18 +816,19 @@ function displayPositionRight() {
       current = 59;
       break;
     case 59:
-
       current = 60;
+      removeBattery();
       break;
     case 60:
-
       current = 60;
+      removeBattery();
       break;
   }
   $(".human").remove();
   var human = $("<img>").addClass("human lost");
   $(position[current]).append(human)
   movementSubtraction();
+  winCondition();
 }
 
 
