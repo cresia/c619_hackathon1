@@ -16,8 +16,6 @@ var position = [
 
 ]
 
-//
-
 function initializeApp() {
   player1 = new Human();
   var buttonDice = $(".dice")
@@ -51,7 +49,6 @@ function displayDice() {
 
 function displayPositionUp(event) {
   console.log("up", current, position[current], event.eventTarget);
-
 
   switch (current) {
     case 52:
