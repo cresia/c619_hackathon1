@@ -1,46 +1,168 @@
-/* body{
-height: 100%;
-width: 100%;
-} */
+body{
+  background-image: url("https://ak6.picdn.net/shutterstock/videos/30577486/thumb/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+aside {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.sideList{
+  border: solid orange 4px;
+  padding: 2%;
+  display: inline-block;
+  width: 20vw;
+  text-align: center;
+  margin-top:20%;
+  margin-left:10%;
+
+}
+
+.dice{
+ background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+
+}
+
+.box{
+  /* border: solid black 1px; */
+  padding: 5%;
+  margin-bottom: 5%;
+  margin-right:3%;
+  background-color:lightskyblue;
+  opacity: 0.8;
+  margin-left:2%;
+
+}
 
 .mainBox{
 display: inline-block;
-height:9vh;
-width:7vw;
-background-color:blue;
-margin-top:30px;
-margin-left: 20px;
+height:7vh;
+width:6vw;
+/* background-color:orange; */
+background-image: url("https://img1.picmix.com/output/stamp/normal/3/6/7/6/1186763_10d73.gif");
+margin-top:2%;
+margin-left: 1%;
 position:relative;
-/* border-radius: 10px; */
-/* margin-right:15px; */
+
 }
+
+
+.mainCards{
+  /* border: solid black 1px; */
+  padding: 3%;
+  width: 65vw;
+  height: 20%;
+  display: inline-block;
+  margin-left:3%;
+
+}
+
 
 .card{
 display: inline-block;
-height:9vh;
-width:7vw;
-background-color:blue;
-margin-top:30px;
-margin-left: 20px;
+height:7vh;
+width:6vw;
+/* background-color:brown; */
+background-image: url("https://media.giphy.com/media/uxNh6BemigCHu/giphy.gif");
+
+margin-top:2%;
+margin-left: 1%;
 position:relative;
-border-radius: 40px;
+border-radius: 50%;
+
 /* margin-right:15px; */
 }
 .hiddenCard{
 visibility:hidden;
 }
+
 .human{
-width:80%;
-height:80%;
+width:60px;
+height:50px;
+position: absolute;
+margin: auto;
+left: 40%;
+top: 20%;
+background-size: contain;
+/* z-index: 1; */
+/* display: inline; */
+background-image: url("https://thumbs.gfycat.com/BigheartedTanHairstreak-small.gif");
+background-repeat: no-repeat;
+
 
 }
-/*
-.battreyBox{
-height:10vh;
-width:8vw;
+
+.human2{
+width:60px;
+height:60px;
+left: 1%;
+top: 8%;
 position: absolute;
-margin-top:10px;
-} */
+margin: auto;
+background-size: contain;
+background-image: url("https://www.dullmensclub.com/new/wp-content/uploads/2018/12/8iGb9kxrT.gif");
+
+}
+
+.allButtons{
+  margin-left:10%;
+  margin-top: 5%;
+  font-weight: bold;
+  width: 10%;
+  background-color: lightgoldenrodyellow;
+  border:solid darkred 4px;
+
+}
+
+
+.zombie1{
+width:60px;
+height:60px;
+position: absolute;
+margin: auto;
+left: 20%;
+top: 1%;
+background-size: contain;
+}
+
+.zombie2{
+width:60px;
+height:60px;
+position: absolute;
+margin: auto;
+left: 15%;
+top: 2%;
+background-size: contain;
+}
+
+.zombie3{
+width:70px;
+height:65px;
+position: absolute;
+margin: auto;
+left: 15%;
+top: 0.3%;
+background-size: contain;
+}
+
+
 #randomNum {
   position:relative;
+}
+
+
+h1{
+  color: white;
 }
