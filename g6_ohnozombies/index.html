@@ -12,45 +12,100 @@
   <title>Document</title>
 </head>
 
-<body>
-  <!-- <div class="card battreyBox">
-<div class="back danCard" data-card="dan"></div> -- back is the answer --
-<div class="front"></div> -- front is the logo --
-</div> -->
-  <div id="randomNum"></div>
-  <div class="contaier">
-    <div>
-      <div class="mainBox">
-        <div class="pos1"></div>
+
+<aside>
+
+  <div class="container sideList">
+    <h1>Welcome to Zombie Zone!</h1>
+
+    <div class="box" >Player 1
+      <div>Move:
+        <div id="player1DiceResult">0</div>
       </div>
-      <div class="card">
-        <div class="pos2"></div>
-      </div>
-      <div class="card">
-        <div class="pos3"></div>
-      </div>
-      <div class="card">
-        <div class="pos4"></div>
-      </div>
-      <div class="card">
-        <div class="pos5"></div>
-      </div>
-      <div class="card">
-        <div class="pos6"></div>
-      </div>
-      <div class="card">
-        <div class="pos7"></div>
-      </div>
-      <div class="card">
-        <div class="pos8"></div>
-      </div>
-      <div class="mainBox">
-        <div class="pos9"></div>
+      <div>Items:
+        <div>0</div>
       </div>
     </div>
+
+
+    <div class="box">Player 2
+      <div>Move:
+         <div>0</div>
+      </div>
+      <div>Items:
+        <div>0</div>
+      </div>
+    </div>
+
+    <div class="box">Zombie 1
+      <div>Move:  <div>0</div>
+      </div>
+    </div>
+
+    <div class="box">Zombie 2
+      <div>Move:
+        <div>0</div>
+      </div>
+    </div>
+
+    <div class="box">Zombie 3
+      <div>Move:
+        <div>0</div>
+      </div>
+    </div>
+
+    <div class="box">
+      <button>Click Cards</button>
+
+    </div>
+
+    <div class="box">
+      <button class="dice">  Dice </button>
+      <div id="randomNum"></div>
+    </div>
+
   </div>
 
-  <div class="contaier">
+</aside>
+
+<body>
+
+
+  <div class="contaier mainCards">
+
+
+    <div class="mainBox">
+      <div class="pos1"></div>
+      <div class="battrey1"></div>
+    </div>
+    <div class="card">
+      <div class="pos2"></div>
+    </div>
+    <div class="card">
+      <div class="pos3"></div>
+    </div>
+    <div class="card">
+      <div class="pos4"></div>
+    </div>
+    <div class="card">
+      <div class="pos5"></div>
+      <img class="zombie1" src="https://i.ya-webdesign.com/images/transparent-sprite-zombie-8.gif" alt="">
+    </div>
+    <div class="card">
+      <div class="pos6"></div>
+    </div>
+    <div class="card">
+      <div class="pos7"></div>
+    </div>
+    <div class="card">
+      <div class="pos8"></div>
+    </div>
+    <div class="mainBox">
+      <div class="pos9"></div>
+      <div class="battrey1"></div>
+    </div>
+
+
     <div>
       <div class="card">
         <div class="pos10"></div>
@@ -79,11 +134,8 @@
       <div class="card">
         <div class="pos18"></div>
       </div>
-    </div>
-  </div>
 
-  <div class="contaier">
-    <div>
+
       <div class="card">
         <div class="pos19"></div>
       </div>
@@ -111,11 +163,8 @@
       <div class="card">
         <div class="pos27"></div>
       </div>
-    </div>
-  </div>
 
-  <div class="contaier">
-    <div>
+
       <div class="card">
         <div class="pos28"></div>
       </div>
@@ -143,11 +192,8 @@
       <div class="card">
         <div class="pos36"></div>
       </div>
-    </div>
-  </div>
 
-  <div class="contaier">
-    <div>
+
       <div class="card">
         <div class="pos37"></div>
       </div>
@@ -162,7 +208,8 @@
       </div>
       <div class="mainBox ">
         <div class="pos41"></div>
-        <img class="human" src="https://image.freepik.com/free-vector/cartoon-african-boy-walking_61103-294.jpg" alt="">
+        <img class="human">
+        <img class="human2">
       </div>
       <div class="card">
         <div class="pos42"></div>
@@ -176,11 +223,8 @@
       <div class="card">
         <div class="pos45"></div>
       </div>
-    </div>
-  </div>
 
-  <div class="contaier">
-    <div>
+
       <div class="card">
         <div class="pos46"></div>
       </div>
@@ -208,11 +252,8 @@
       <div class="card">
         <div class="pos54"></div>
       </div>
-    </div>
-  </div>
 
-  <div class="contaier">
-    <div>
+
       <div class="card">
         <div class="pos55"></div>
       </div>
@@ -240,12 +281,12 @@
       <div class="card">
         <div class="pos63"></div>
       </div>
-    </div>
-  </div>
-  <div class="contaier">
-    <div>
+
+
       <div class="card">
         <div class="pos64"></div>
+        <img class="zombie2" src="https://media0.giphy.com/media/Lit3xSpGcn5ss/source.gif"
+          alt="">
       </div>
       <div class="card hiddenCard">
         <div class="pos65"></div>
@@ -270,14 +311,14 @@
       </div>
       <div class="card">
         <div class="pos72"></div>
+        <img class="zombie3" src="https://i1.wp.com/www.pcdon.com/walking_frankenstein_monster-200x241_149x180_124x150.gif"
+          alt="">
       </div>
-    </div>
-  </div>
 
-  <div class="contaier">
-    <div>
+
       <div class="mainBox">
         <div class="pos73"></div>
+        <div class="battrey1"></div>
       </div>
       <div class="card">
         <div class="pos74"></div>
@@ -302,9 +343,18 @@
       </div>
       <div class="mainBox">
         <div class="pos81"></div>
+        <div class="battrey1"></div>
       </div>
-    </div>
-  </div>
+
+
+      <button class="allButtons" id="moveUp">Up</button>
+      <button class="allButtons" id="moveDown">Down</button>
+      <button class="allButtons" id="moveLeft">Left</button>
+      <button class="allButtons" id="moveRight">Right</button>
+
+
+      <div>
+
 </body>
 
 </html>
