@@ -1,1 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="main.js"></script>
+  <script src="human_zombie.js"></script>
+  <link rel="stylesheet" href="../g6_ohnozombies/style.css">
+  <title>Document</title>
+</head>
+
+
+
+
+<aside>
+
+  <div class="container sideList">
+    <h1>Welcome to Zombie Zone!</h1>
+
+    <div class="box" >Player 1
+      <div>Move:
+        <div id="player1DiceResult">0</div>
+      </div>
+      <div>Items:
+        <div>0</div>
+      </div>
+    </div>
+
+
+    <div class="box">Player 2
+      <div>Move:
+         <div>0</div>
+      </div>
+      <div>Items:
+        <div>0</div>
+      </div>
+    </div>
+
+    <div class="box">Zombie 1
+      <div>Move:  <div>0</div>
+      </div>
+    </div>
+
+    <div class="box">Zombie 2
+      <div>Move:
+        <div>0</div>
+      </div>
+    </div>
+
+    <div class="box">Zombie 3
+      <div>Move:
+        <div>0</div>
+      </div>
+    </div>
+
+    <div class="box">
+      <button id="clickCards">Click Cards</button>
+
+    </div>
+
+    <div class="box">
+      <button class="dice"> Click Dice </button>
+      <div id="randomNum">0</div>
+    </div>
+
+  </div>
+
+</aside>
+
+<body>
+
+
+  <div class="contaier mainCards">
+
+
+    <div class="mainBox">
+      <div class="pos1 battery"></div>
+    </div>
+    <div class="card">
+      <div class="pos2"></div>
+    </div>
+    <div class="card">
+      <div class="pos3"></div>
+    </div>
+    <div class="card">
+      <div class="pos4"></div>
+    </div>
+    <div class="card">
+      <div class="pos5"></div>
+      <img class="zombie1" src="https://i.ya-webdesign.com/images/transparent-sprite-zombie-8.gif" alt="">
+    </div>
+    <div class="card">
+      <div class="pos6"></div>
+    </div>
+    <div class="card">
+      <div class="pos7"></div>
+    </div>
+    <div class="card">
+      <div class="pos8"></div>
+    </div>
+    <div class="mainBox">
+      <div class="pos9 battery"></div>
+    </div>
+
+
+    <div>
+      <div class="card">
+        <div class="pos10"></div>
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos11"></div>
+      </div>
+      <div class="card">
+        <div class="pos12"></div>
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos13"></div>
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos14"></div>
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos15"></div>
+      </div>
+      <div class="card">
+        <div class="pos16"></div>
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos17"></div>
+      </div>
+      <div class="card">
+        <div class="pos18"></div>
+      </div>
+
+
+      <div class="card">
+        <div class="pos19"></div>
+      </div>
+      <div class="card">
+        <div class="pos20"></div>
+      </div>
+      <div class="card ">
+        <div class="pos21"></div>
+      </div>
+      <div class="card">
+        <div class="pos22"></div>
+      </div>
+      <div class="card ">
+        <div class="pos23"></div>
+      </div>
+      <div class="card">
+        <div class="pos24"></div>
+      </div>
+      <div class="card">
+        <div class="pos25"></div>
+      </div>
+      <div class="card">
+        <div class="pos26"></div>
+      </div>
+      <div class="card">
+        <div class="pos27"></div>
+      </div>
+
+
+      <div class="card">
+        <div class="pos28"></div>
+      </div>
+      <div class="card hiddenCard ">
+        <div class="pos29"></div>
+      </div>
+      <div class="card">
+        <div class="pos30"></div>
+      </div>
+      <div class="card hiddenCard ">
+        <div class="pos31"></div>
+      </div>
+      <div class="card">
+        <div class="pos32"></div>
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos33"></div>
+      </div>
+      <div class="card">
+        <div class="pos34"></div>
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos35"></div>
+      </div>
+      <div class="card">
+        <div class="pos36"></div>
+      </div>
+
+
+      <div class="card">
+        <div class="pos37"></div>
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos38"></div>
+      </div>
+      <div class="card">
+        <div class="pos39"></div>
+      </div>
+      <div class="card">
+        <div class="pos40"></div>
+      </div>
+      <div class="mainBox ">
+        <div class="pos41"></div>
+        <img class="human">
+        <img class="human2">
+      </div>
+      <div class="card">
+        <div class="pos42"></div>
+      </div>
+      <div class="card">
+        <div class="pos43"></div>
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos44"></div>
+      </div>
+      <div class="card">
+        <div class="pos45"></div>
+      </div>
+
+
+      <div class="card">
+        <div class="pos46"></div>
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos47"></div>
+      </div>
+      <div class="card">
+        <div class="pos48"></div>
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos49"></div>
+      </div>
+      <div class="card">
+        <div class="pos50"></div>
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos51"></div>
+      </div>
+      <div class="card">
+        <div class="pos52"></div>
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos53"></div>
+      </div>
+      <div class="card">
+        <div class="pos54"></div>
+      </div>
+
+
+      <div class="card">
+        <div class="pos55"></div>
+      </div>
+      <div class="card">
+        <div class="pos56"></div>
+      </div>
+      <div class="card">
+        <div class="pos57"></div>
+      </div>
+      <div class="card">
+        <div class="pos58"></div>
+      </div>
+      <div class="card">
+        <div class="pos59"></div>
+      </div>
+      <div class="card">
+        <div class="pos60"></div>
+      </div>
+      <div class="card">
+        <div class="pos61"></div>
+      </div>
+      <div class="card">
+        <div class="pos62"></div>
+      </div>
+      <div class="card">
+        <div class="pos63"></div>
+      </div>
+
+
+      <div class="card">
+        <div class="pos64"></div>
+        <img class="zombie2" src="https://media0.giphy.com/media/Lit3xSpGcn5ss/source.gif"
+          alt="">
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos65"></div>
+      </div>
+      <div class="card">
+        <div class="pos66"></div>
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos67"></div>
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos68"></div>
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos69"></div>
+      </div>
+      <div class="card">
+        <div class="pos70"></div>
+      </div>
+      <div class="card hiddenCard">
+        <div class="pos71"></div>
+      </div>
+      <div class="card">
+        <div class="pos72"></div>
+        <img class="zombie3" src="https://i1.wp.com/www.pcdon.com/walking_frankenstein_monster-200x241_149x180_124x150.gif"
+          alt="">
+      </div>
+
+
+      <div class="mainBox">
+        <div class="pos73 battery"></div>
+      </div>
+      <div class="card">
+        <div class="pos74"></div>
+      </div>
+      <div class="card">
+        <div class="pos75"></div>
+      </div>
+      <div class="card">
+        <div class="pos76"></div>
+      </div>
+      <div class="card">
+        <div class="pos77"></div>
+      </div>
+      <div class="card">
+        <div class="pos78"></div>
+      </div>
+      <div class="card">
+        <div class="pos79"></div>
+      </div>
+      <div class="card">
+        <div class="pos80"></div>
+      </div>
+      <div class="mainBox">
+        <div class="pos81 battery"></div>
+      </div>
+
+
+      <button class="allButtons" id="moveUp">Up</button>
+      <button class="allButtons" id="moveDown">Down</button>
+      <button class="allButtons" id="moveLeft">Left</button>
+      <button class="allButtons" id="moveRight">Right</button>
+
+
+      <div>
+
+</body>
+
+</html>
