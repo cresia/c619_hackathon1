@@ -17,6 +17,12 @@ var position = [
 
 ]
 
+var deckCards = ["The Zombie grabs you, but just before he takes a bite out of your shoulder. He crumble to the ground and begin to snore. Lucky you!",
+  "You grab a handful a dirt and throw away in the face of the zombie. You take off down the trail",
+  "The zombie grabs your arms and munches like a turkey leg and you become a zombie"];
+
+
+
 function initializeApp() {
   player1 = new Human();
   player2 = new Human();
@@ -66,18 +72,74 @@ function initializeApp() {
       // buttonMoveDown.off("click");
       // buttonMoveLeft.off("click");
       // buttonMoveRight.off("click");
-
     }
+  }
+
+  function shuffleCards(arrayCards) {
+    console.log("inside");
+    var randomCards;
+    for (var i = 0; i < deckCards.length; i++) {
+      randomCards = Math.floor(Math.random() * deckCards.length);
+    }
+    return arrayCards[randomCards];
+  }
+
+  var buttonClickCards = $("#clickCards").on("click", showCard);
+  function showCard() {
+    var text = shuffleCards(deckCards);
+    var modal = {
+      "width": "30vw",
+      "height": "50vh",
+      "background-color": 'black',
+      "background-size": "cover",
+      "position": "absolute",
+      "display": "inline-block",
+      // "margin": "auto",
+      "z-index": "2",
+      "text-align": "center",
+      "font-size": "3rem",
+      // "padding": "20vh",
+      "margin-right": "30%",
+      // "border": "5px solid red",
+      "color": "yellow"
+    }
+    var myModal = $("<div>").css(modal).text(text);
+    var button = $("<button>").css({"font-size":"1rem", "postion": "absolute", }).text("Close");
+    myModal.addClass("modalClass");
+    button.addClass("myButton");
+    button.appendTo(myModal);
+    $(".pos22").append(myModal);
+    $(".myButton").on("click", function () {
+      $(".modalClass").hide();
+    })
 
 
   }
 
-
 }
 
+
+
 function winCondition() {
+  var modal = {
+    "width": "40vw",
+    "height": "20vh",
+    "background-color": 'black',
+    "background-size": "cover",
+    "position": "absolute",
+    "display": "inline-block",
+    "margin": "auto",
+    "text-align": "center",
+    "font-size": "3rem",
+    "padding": "20vh",
+    "border": "5px solid red",
+    "color": "yellow",
+    "z-index": "3"
+  }
   if (position[current] === ".pos41" && player1.battery.length > 0) {
-    console.log("YOU WIN!");
+    var myModal = $("<div>").css(modal).text("Congratulations!You Won!");
+    myModal.addClass("modalClass");
+    $(".pos19").append(myModal);
   }
 }
 
