@@ -4,6 +4,8 @@ var random;
 var current = 30;
 var countStep = 0;
 
+
+
 var position = [
   ".pos1", ".pos2", ".pos3", ".pos4", ".pos5", ".pos6", ".pos7", ".pos8", ".pos9",
   ".pos10", ".pos12", ".pos16", ".pos18",
@@ -16,6 +18,7 @@ var position = [
   ".pos73", ".pos74", ".pos75", ".pos76", ".pos77", ".pos78", ".pos79", ".pos80", ".pos81"
 
 ]
+
 
 var deckCards = ["The Zombie grabs you, but just before he takes a bite out of your shoulder. He crumble to the ground and begin to snore. Lucky you!",
   "You grab a handful a dirt and throw away in the face of the zombie. You take off down the trail",

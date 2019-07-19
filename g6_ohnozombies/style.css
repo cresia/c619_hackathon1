@@ -4,6 +4,8 @@ body{
   background-size: cover;
 }
 
+
+
 aside {
   display: inline-block;
   vertical-align: top;
@@ -19,6 +21,7 @@ aside {
   margin-left:10%;
 
 }
+
 
 
 .dice{

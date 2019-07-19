@@ -5,6 +5,8 @@ class Human {
     this.battery = [];
     this.turn = false;
   }
+
+
   setStep(step) {
     this.step = step;
 
