@@ -171,3 +171,17 @@ background-size: contain;
 h1{
   color: white;
 }
+
+.battery{
+width:80px;
+height:50px;
+position: absolute;
+margin: auto;
+left: 10%;
+top: 10%;
+background-size: contain;
+background-image: url("https://www.pinclipart.com/picdir/middle/409-4090619_theres-a-good-reason-we-keep-our-remote.png");
+background-repeat: no-repeat;
+
+
+}
