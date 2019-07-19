@@ -63,8 +63,8 @@ function displayDice() {
 
 function displayPositionUp() {
   switch (current) {
-    case 0:
-      current = 1;
+    case 52:
+      current = 48;
       break;
     case 48:
       current = 39;
