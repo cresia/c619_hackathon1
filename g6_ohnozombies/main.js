@@ -17,6 +17,10 @@ var position = [
 
 ]
 
+var deckCards = ["The Zombie grabs you, but just before he takes a bite out of your shoulder. He crumble to the ground and begin to snore. Lucky you!",
+"You grab a handful a dirt and throw away in the face of the zombie. You take off down the trail",
+"The zombie grabs your arms and muches like a turkey leg and you become a zombie"];
+
 function initializeApp() {
   player1 = new Human();
   player2 = new Human();
@@ -79,6 +83,19 @@ function winCondition() {
   if (position[current] === ".pos41" && player1.battery.length > 0) {
     console.log("YOU WIN!");
   }
+}
+
+function shuffleCards(arrayCards){
+  var randomCards;
+  for(var i = 0; i < deckCards.length; i++){
+    randomCards = Math.floor(Math.random() * deckCards.length);
+
+  }
+
+  
+
+  $("#shuffleCards").append((arrayCards[randomCards]))
+
 }
 
 function removeBattery() {

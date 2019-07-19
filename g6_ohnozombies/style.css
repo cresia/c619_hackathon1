@@ -51,7 +51,6 @@ aside {
 
 
 .mainBox{
-
 display: inline-block;
 height:7vh;
 width:6vw;
@@ -170,4 +169,21 @@ background-size: contain;
 
 h1{
   color: white;
+}
+
+
+.batrrey{
+  width:60px;
+  height:60px;
+  position: absolute;
+  margin: auto;
+  left: 20%;
+  top: 10%;
+  background-size: contain;
+  background-image: url("https://www.dullmensclub.com/new/wp-content/uploads/2018/12/8iGb9kxrT.gif");
+}
+
+
+.modal-content{
+  background-color: orange;
 }
