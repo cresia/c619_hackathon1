@@ -1,5 +1,5 @@
 body{
-  background-image: url("https://ak6.picdn.net/shutterstock/videos/30577486/thumb/1.jpg");
+  background-color:blue;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -51,7 +51,7 @@ display: inline-block;
 height:7vh;
 width:6vw;
 /* background-color:orange; */
-background-image: url("https://img1.picmix.com/output/stamp/normal/3/6/7/6/1186763_10d73.gif");
+background-color: white;
 margin-top:2%;
 margin-left: 1%;
 position:relative;
@@ -75,7 +75,7 @@ display: inline-block;
 height:7vh;
 width:6vw;
 /* background-color:brown; */
-background-image: url("https://media.giphy.com/media/uxNh6BemigCHu/giphy.gif");
+background-color:gray;
 
 margin-top:2%;
 margin-left: 1%;
@@ -104,18 +104,6 @@ background-repeat: no-repeat;
 
 }
 
-.human2{
-width:60px;
-height:60px;
-left: 1%;
-top: 8%;
-position: absolute;
-margin: auto;
-background-size: contain;
-background-image: url("https://www.dullmensclub.com/new/wp-content/uploads/2018/12/8iGb9kxrT.gif");
-
-}
-
 .allButtons{
   margin-left:10%;
   margin-top: 5%;
@@ -136,27 +124,6 @@ left: 20%;
 top: 1%;
 background-size: contain;
 }
-
-.zombie2{
-width:60px;
-height:60px;
-position: absolute;
-margin: auto;
-left: 15%;
-top: 2%;
-background-size: contain;
-}
-
-.zombie3{
-width:70px;
-height:65px;
-position: absolute;
-margin: auto;
-left: 15%;
-top: 0.3%;
-background-size: contain;
-}
-
 
 #randomNum {
   position:relative;

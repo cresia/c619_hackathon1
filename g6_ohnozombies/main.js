@@ -1,6 +1,4 @@
 $(document).ready(initializeApp);
-var random;
-var current = 30;
 
 var position = [
 //    0         1          2         3        4         5         6         7          8
@@ -24,42 +22,80 @@ var position = [
 ]
 
 function initializeApp() {
-  var player1 = new Human();
-  var zombie1 = new Zombie();
+  var player = new Human();
+  var dice = new Zdice();
+  var current = player.current;
 
-  var buttonDice = $(".dice")
-  $(".boxDice").append(buttonDice);
-  buttonDice.click(rollDice);
+  var mainCards = $(".mainCards");
+  mainCards.append(player.buttonMoveUp);
+  mainCards.append(player.buttonMoveDown);
+  mainCards.append(player.buttonMoveLeft);
+  mainCards.append(player.buttonMoveRight);
 
-  var buttonMoveUp    = $("#moveUp");
-  var buttonMoveDown  = $("#moveDown");
-  var buttonMoveLeft  = $("#moveLeft");
-  var buttonMoveRight = $("#moveRight");
+  player.buttonMoveUp.click(displayPositionUp);
+  player.buttonMoveDown.click(displayPositionDown);
+  player.buttonMoveLeft.click(displayPositionLeft);
+  player.buttonMoveRight.click(displayPositionRight);
 
-  $(".mainCards").append(buttonMoveUp);
-  $(".mainCards").append(buttonMoveDown);
-  $(".mainCards").append(buttonMoveLeft);
-  $(".mainCards").append(buttonMoveRight);
+  var boxDice = $(".boxDice");
+  boxDice.append(dice.buttonDice);
 
-  buttonMoveUp.click(displayPositionUp);
-  buttonMoveDown.click(displayPositionDown);
-  buttonMoveLeft.click(displayPositionLeft);
-  buttonMoveRight.click(displayPositionRight);
+  dice.buttonDice.click(function() {
+    dice.rollDice();
+    zombiesOnBoard();
+  });
 
-function rollDice() {
-  random = Math.floor(Math.random() * 6 + 1);
-  if (player1.step === 0) {
-    player1.setStep(random);
-    var getPlayer1 = $("#player1DiceResult").text(player1.step);
-    $("#player1DiceResult").append(getPlayer1);
+  function zombiesOnBoard(){
+    console.log("Zombies coming!!!!");
+    for (var i = 0; i < dice.result; i++){
+      var zombie = new zombie();
+    }
   }
-  displayDice();
-}
 
-function displayDice() {
-  var randomNumber = $("#randomNum").text(random);
-  $("#randomNum").append(randomNumber);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function displayPositionUp() {
   switch (current) {
@@ -190,7 +226,6 @@ function displayPositionUp() {
   $(".human").remove();
   var human = $("<img>").addClass("human lost");
   $(position[current]).append(human);
-  movementSubtraction();
 }
 
 function displayPositionDown() {
@@ -322,7 +357,6 @@ function displayPositionDown() {
   $(".human").remove();
   var human = $("<img>").addClass("human lost");
   $(position[current]).append(human);
-  movementSubtraction();
 }
 
 function displayPositionLeft() {
@@ -454,7 +488,6 @@ function displayPositionLeft() {
   $(".human").remove();
   var human = $("<img>").addClass("human lost");
   $(position[current]).append(human);
-  movementSubtraction()
 }
 
 function displayPositionRight() {
@@ -586,14 +619,5 @@ function displayPositionRight() {
   $(".human").remove();
   var human = $("<img>").addClass("human lost");
   $(position[current]).append(human)
-  movementSubtraction();
-}
-
-function movementSubtraction(){
-  if(player1.step > 0){
-    player1.setStep(player1.step - 1);
-    var getPlayer1 = $("#player1DiceResult").text(player1.step);
-    $("#player1DiceResult").append(getPlayer1);
-    }
   }
 }

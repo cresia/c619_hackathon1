@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
   <script src="main.js"></script>
-  <script src="human_zombie.js"></script>
+  <script src="human.js"></script>
+  <script src="zombie.js"></script>
+  <script src="dice.js"></script>
   <link rel="stylesheet" href="../g6_ohnozombies/style.css">
   <title>Document</title>
 </head>
+
 
 
 <aside>
@@ -18,39 +17,17 @@
   <div class="container sideList">
     <h1>Welcome to Zombie Zone!</h1>
 
-    <div class="box" >Player 1
+    <div class="box" >Player
       <div>Move:
-        <div id="player1DiceResult">0</div>
+        <div id="player1DiceResult"></div>
       </div>
       <div>Items:
-        <div>0</div>
+        <div></div>
       </div>
     </div>
 
-
-    <div class="box">Player 2
-      <div>Move:
-         <div>0</div>
-      </div>
-      <div>Items:
-        <div>0</div>
-      </div>
-    </div>
-
-    <div class="box">Zombie 1
-      <div>Move:  <div>0</div>
-      </div>
-    </div>
-
-    <div class="box">Zombie 2
-      <div>Move:
-        <div>0</div>
-      </div>
-    </div>
-
-    <div class="box">Zombie 3
-      <div>Move:
-        <div>0</div>
+    <div class="box">Zombie
+      <div>Number:  <div class="zombieNum">0</div>
       </div>
     </div>
 
@@ -61,7 +38,7 @@
 
     <div class="box">
       <button class="dice"> Click Dice </button>
-      <div id="randomNum">0</div>
+      <div id="randomNum"></div>
     </div>
 
   </div>
@@ -283,8 +260,6 @@
 
       <div class="card">
         <div class="pos64"></div>
-        <img class="zombie2" src="https://media0.giphy.com/media/Lit3xSpGcn5ss/source.gif"
-          alt="">
       </div>
       <div class="card hiddenCard">
         <div class="pos65"></div>
@@ -309,8 +284,6 @@
       </div>
       <div class="card">
         <div class="pos72"></div>
-        <img class="zombie3" src="https://i1.wp.com/www.pcdon.com/walking_frankenstein_monster-200x241_149x180_124x150.gif"
-          alt="">
       </div>
 
 
