@@ -1,5 +1,5 @@
 body{
-  background-color:blue;
+  background-color:whitesmoke;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -20,7 +20,7 @@ aside {
 
 }
 
-.dice{
+/* .dice{
  background-color: black;
   border: none;
   color: white;
@@ -33,76 +33,76 @@ aside {
   cursor: pointer;
 
 
-}
+} */
 
-.box{
+/* .box{
   /* border: solid black 1px; */
-  padding: 5%;
+  /* padding: 5%;
   margin-bottom: 5%;
   margin-right:3%;
   background-color:lightskyblue;
   opacity: 0.8;
   margin-left:2%;
 
-}
+/* } */
 
-.mainBox{
+/* .mainBox{
 display: inline-block;
 height:7vh;
 width:6vw;
 /* background-color:orange; */
-background-color: white;
+/* background-color: white;
 margin-top:2%;
 margin-left: 1%;
 position:relative;
 
-}
+}  */
 
 
-.mainCards{
+/* .mainCards{ */
   /* border: solid black 1px; */
-  padding: 3%;
+  /* padding: 3%;
   width: 65vw;
   height: 20%;
   display: inline-block;
   margin-left:3%;
 
-}
+} */
 
 
-.card{
+/* .card{
 display: inline-block;
 height:7vh;
-width:6vw;
+width:6vw; */
 /* background-color:brown; */
-background-color:gray;
+/* background-color:gray;
 
 margin-top:2%;
 margin-left: 1%;
 position:relative;
-border-radius: 50%;
+border-radius: 50%; */
 
 /* margin-right:15px; */
-}
-.hiddenCard{
+/*}*/
+/* .hiddenCard{
 visibility:hidden;
-}
+} */
 
-.human{
+/* .human{
 width:60px;
 height:50px;
 position: absolute;
 margin: auto;
 left: 40%;
 top: 20%;
-background-size: contain;
+background-size: contain; */
 /* z-index: 1; */
 /* display: inline; */
-background-image: url("https://thumbs.gfycat.com/BigheartedTanHairstreak-small.gif");
+/* background-image: url("https://thumbs.gfycat.com/BigheartedTanHairstreak-small.gif");
 background-repeat: no-repeat;
 
 
-}
+} */
 
 .allButtons{
   margin-left:10%;
@@ -115,7 +115,7 @@ background-repeat: no-repeat;
 }
 
 
-.zombie1{
+/* .zombie1{
 width:60px;
 height:60px;
 position: absolute;
@@ -132,4 +132,37 @@ background-size: contain;
 
 h1{
   color: white;
+} */
+
+.gridBox{
+display: inline-block;
+height:70px;
+width:70px;
+position:relative;
+background-size: contain;
+}
+
+.location{
+background-image: url("./squarestone.jpg");
+display: inline-block;
+height:70px;
+width:70px;
+position:relative;
+background-size: contain;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.human{
+width:50px;
+height:50px;
+position: absolute;
+margin: auto;
+left: 40%;
+top: 20%;
+background-size: contain;
+background-image: url("https://thumbs.gfycat.com/BigheartedTanHairstreak-small.gif");
+background-repeat: no-repeat;
 }

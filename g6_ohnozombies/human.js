@@ -1,16 +1,10 @@
 class Human {
   constructor() {
-    this.step = 0;
-    this.item = [];
-    this.current = 30;
-    this.battery1 = false;
+    this.lives = 3;
+    this.battery = false;
     this.buttonMoveUp = $("#moveUp");
     this.buttonMoveDown = $("#moveDown");
     this.buttonMoveLeft = $("#moveLeft");
     this.buttonMoveRight = $("#moveRight");
-    
-  }
-  setStep(step) {
-    this.step = step;
   }
 }
