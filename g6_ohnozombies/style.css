@@ -1,14 +1,13 @@
 body{
-  background-color:whitesmoke;
+  background-image:url("./ZombieBackground.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 aside {
   display: inline-block;
-  vertical-align: top;
+  float: right;
+  margin-right: 10%;
 }
-
 .sideList{
   border: solid orange 4px;
   padding: 2%;
@@ -17,10 +16,8 @@ aside {
   text-align: center;
   margin-top:20%;
   margin-left:10%;
-
 }
-
-/* .dice{
+.dice{
  background-color: black;
   border: none;
   color: white;
@@ -31,91 +28,18 @@ aside {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-
-
-} */
-
-/* .box{
-  /* border: solid black 1px; */
-  /* padding: 5%;
+}
+.box{
+  padding: 5%;
   margin-bottom: 5%;
   margin-right:3%;
-  background-color:lightskyblue;
+  background-color:pink;
   opacity: 0.8;
   margin-left:2%;
-
-/* } */
-
-/* .mainBox{
-display: inline-block;
-height:7vh;
-width:6vw;
-/* background-color:orange; */
-/* background-color: white;
-margin-top:2%;
-margin-left: 1%;
-position:relative;
-
-}  */
-
-
-/* .mainCards{ */
-  /* border: solid black 1px; */
-  /* padding: 3%;
-  width: 65vw;
-  height: 20%;
-  display: inline-block;
-  margin-left:3%;
-
-} */
-
-
-/* .card{
-display: inline-block;
-height:7vh;
-width:6vw; */
-/* background-color:brown; */
-/* background-color:gray;
-
-margin-top:2%;
-margin-left: 1%;
-position:relative;
-border-radius: 50%; */
-
-/* margin-right:15px; */
-/*}*/
-/* .hiddenCard{
-visibility:hidden;
-} */
-
-/* .human{
-width:60px;
-height:50px;
-position: absolute;
-margin: auto;
-left: 40%;
-top: 20%;
-background-size: contain; */
-/* z-index: 1; */
-/* display: inline; */
-/* background-image: url("https://thumbs.gfycat.com/BigheartedTanHairstreak-small.gif");
-background-repeat: no-repeat;
-
-
-} */
-
-.allButtons{
-  margin-left:10%;
-  margin-top: 5%;
-  font-weight: bold;
-  width: 10%;
-  background-color: lightgoldenrodyellow;
-  border:solid darkred 4px;
-
+  color:green;
 }
 
-
-/* .zombie1{
+.zombie1{
 width:60px;
 height:60px;
 position: absolute;
@@ -125,30 +49,25 @@ top: 1%;
 background-size: contain;
 }
 
-#randomNum {
-  position:relative;
-}
-
-
-h1{
-  color: white;
-} */
-
 .gridBox{
 display: inline-block;
-height:70px;
-width:70px;
+height:7vh;
+width:5vw;
 position:relative;
 background-size: contain;
+margin: 0.6%;
+top: 2%;
+background-image: url("./squarestone.jpg");
 }
 
 .location{
 background-image: url("./squarestone.jpg");
 display: inline-block;
-height:70px;
-width:70px;
+height:7vh;
+width:6vw;
 position:relative;
 background-size: contain;
+margin: 1%;
 }
 
 .hidden {
@@ -156,13 +75,54 @@ background-size: contain;
 }
 
 .human{
-width:50px;
-height:50px;
+width:6vw;
+height:7vh;
 position: absolute;
 margin: auto;
-left: 40%;
-top: 20%;
+left: 30%;
+top: 1%;
 background-size: contain;
-background-image: url("https://thumbs.gfycat.com/BigheartedTanHairstreak-small.gif");
+background-image: url("./Human.gif");
 background-repeat: no-repeat;
+}
+
+.modal-start{
+  background-color: black;
+  color:green;
+  border: orange solid 5px;
+  position: absolute;
+  display: inline-block;
+  width: 50%;
+  height:55%;
+  z-index: 5;
+  font-size: 25px;
+  margin-top: 10%;
+  margin-left: 6.5%;
+}
+#closeModal{
+  width: 20%;
+  height: 30%;
+  margin-left:40%;
+  margin-top:1.5%;
+}
+
+h1 {
+  color:green;
+}
+
+.allButtons{
+  margin-left:10%;
+  margin-top: 5%;
+  font-weight: bold;
+  width: 20%;
+  background-color: lightgoldenrodyellow;
+  border:solid darkred 4px;
+}
+
+.battery {
+  background-image: url("./battery.jpg");
+  background-size: 35px;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: contain;
 }

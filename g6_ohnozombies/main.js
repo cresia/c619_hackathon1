@@ -3,6 +3,7 @@ $(document).ready(initializeApp);
 function initializeApp() {
   var player = new Human();
   var dice = new Zdice();
+  var battery = []
 
   var playerLocation = { xco: 0, yco: 0 };
 
@@ -18,6 +19,12 @@ function initializeApp() {
   player.buttonMoveDown.click(moveDown);
   player.buttonMoveUp.click(moveUp);
 
+  function closeModal() {
+    var modalAndButton = $("#startGame")
+    $(modalAndButton).hide()
+  }
+  var buttonClickCards = $("#closeModal").on("click", closeModal);
+
   function setLocation() {
     $("[xco='" + playerLocation.xco + "'][yco='" + playerLocation.yco + "']").addClass("human");
   }
@@ -26,7 +33,7 @@ function initializeApp() {
     $("[xco='" + playerLocation.xco + "'][yco='" + playerLocation.yco + "']").removeClass("human");
   }
 
-  var boxDice = $(".boxDice");
+  var boxDice = $(".dice");
   boxDice.append(dice.buttonDice);
 
   dice.buttonDice.click(function() {
@@ -51,6 +58,11 @@ function initializeApp() {
       removeLocation(playerLocation.xco);
       playerLocation.xco -= 1;
       setLocation(playerLocation.xco);
+      if (checkBattery() === true) {
+        battery.push("battery");
+        removeBattery();
+      }
+      winCondition();
     }
   }
 
@@ -61,6 +73,11 @@ function initializeApp() {
       removeLocation(playerLocation.yco);
       playerLocation.xco += 1;
       setLocation(playerLocation.xco);
+      if (checkBattery() === true) {
+        battery.push("battery");
+        removeBattery();
+      }
+      winCondition();
     }
   }
 
@@ -71,6 +88,11 @@ function initializeApp() {
       removeLocation(playerLocation.xco);
       playerLocation.yco += 1;
       setLocation(playerLocation.yco);
+      if (checkBattery() === true) {
+        battery.push("battery");
+        removeBattery();
+      }
+      winCondition();
     }
   }
 
@@ -81,6 +103,27 @@ function initializeApp() {
       removeLocation(playerLocation.xco);
       playerLocation.yco -= 1;
       setLocation(playerLocation.yco);
+      if (checkBattery() === true) {
+        battery.push("battery");
+        removeBattery();
+      }
+      winCondition();
     }
   }
+
+  function winCondition() {
+    var originCheck = $("[yco='" + (playerLocation.yco) + "'][xco='" + (playerLocation.xco + "']")).hasClass("origin");
+    if (battery.length === 4 && originCheck === true) {
+      console.log("You survived the zombies!");
+    }
+  }
+
+  function checkBattery() {
+    return $("[yco='" + (playerLocation.yco) + "'][xco='" + (playerLocation.xco + "']")).hasClass("battery");
+  }
+
+  function removeBattery() {
+    $("[yco='" + (playerLocation.yco) + "'][xco='" + (playerLocation.xco + "']")).removeClass("battery");
+  }
+
 }
