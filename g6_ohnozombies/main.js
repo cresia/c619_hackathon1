@@ -23,7 +23,8 @@ function initializeApp() {
     var modalAndButton = $("#startGame")
     $(modalAndButton).hide()
   }
-  var buttonClickCards = $("#closeModal").on("click", closeModal);
+
+  var buttonCloseModal = $("#closeModal").on("click", closeModal);
 
   function setLocation() {
     $("[xco='" + playerLocation.xco + "'][yco='" + playerLocation.yco + "']").addClass("human");
@@ -42,13 +43,18 @@ function initializeApp() {
   });
 
   function zombiesOnBoard(){
-    console.log("Zombies are coming!!!!");
-    var zombieArray = [];
-    for (var i = 0; i < dice.result; i++){
-      var zombie = new Zombie();
-      zombieArray.push(zombie);
+    for (var i = 1; i < dice.result + 8; i++){
+      var randomX = Math.floor(Math.random() * 4 + Math.random() * -4);
+      if (randomX == 0){
+        randomX++;
+      }
+      var randomY = Math.floor(Math.random() * 4 + Math.random() * -4);
+      if (randomY == 0) {
+        randomY++;
+      }
+      var zombieAppear = $("[xco=" + randomX + "][yco=" + randomY + "]").addClass('zombie');
+      $(".location").append(zombieAppear);
     }
-    console.log(zombieArray);
   }
 
   function moveLeft() {
@@ -63,6 +69,7 @@ function initializeApp() {
         removeBattery();
       }
       winCondition();
+      checkZombie();
     }
   }
 
@@ -78,6 +85,7 @@ function initializeApp() {
         removeBattery();
       }
       winCondition();
+      checkZombie();
     }
   }
 
@@ -93,6 +101,7 @@ function initializeApp() {
         removeBattery();
       }
       winCondition();
+      checkZombie();
     }
   }
 
@@ -108,13 +117,15 @@ function initializeApp() {
         removeBattery();
       }
       winCondition();
+      checkZombie();
     }
   }
 
   function winCondition() {
     var originCheck = $("[yco='" + (playerLocation.yco) + "'][xco='" + (playerLocation.xco + "']")).hasClass("origin");
     if (battery.length === 4 && originCheck === true) {
-      console.log("You survived the zombies!");
+
+      $(".modal-start").text("You survived the zombies!").show();
     }
   }
 
@@ -126,4 +137,19 @@ function initializeApp() {
     $("[yco='" + (playerLocation.yco) + "'][xco='" + (playerLocation.xco + "']")).removeClass("battery");
   }
 
+  function checkZombie() {
+    if ($("[yco='" + (playerLocation.yco) + "'][xco='" + (playerLocation.xco + "']")).hasClass("zombie")){
+      $("[yco='" + (playerLocation.yco) + "'][xco='" + (playerLocation.xco + "']")).css("visibility","visible")
+      var num = $("#playerLives").text();
+      var playerLives = $("#playerLives").text(num - 1);
+      $("#playerLives").append(playerLives);
+      if ($("#playerLives").text() === "0"){
+        $(".modal-start").text("The zombie nom nom on you!").show();
+        player.buttonMoveRight.off();
+        player.buttonMoveLeft.off();
+        player.buttonMoveDown.off();
+        player.buttonMoveUp.off();
+      }
+    }
+  }
 }

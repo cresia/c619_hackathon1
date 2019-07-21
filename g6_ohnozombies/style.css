@@ -39,21 +39,26 @@ aside {
   color:green;
 }
 
-.zombie1{
-width:60px;
-height:60px;
+.zombie{
+width:5vw;
+height:7vh;
 position: absolute;
-margin: auto;
-left: 20%;
+margin: 0.6%;
+top: 2%;
+left: 30%;
 top: 1%;
 background-size: contain;
+background-image: url("./Zombie.gif");
+background-repeat: no-repeat;
+z-index: 3;
+visibility: hidden;
 }
 
 .gridBox{
 display: inline-block;
 height:7vh;
 width:5vw;
-position:relative;
+position: relative;
 background-size: contain;
 margin: 0.6%;
 top: 2%;
@@ -61,13 +66,14 @@ background-image: url("./squarestone.jpg");
 }
 
 .location{
-background-image: url("./squarestone.jpg");
+/* background-image: url("./squarestone.jpg"); */
 display: inline-block;
 height:7vh;
-width:6vw;
-position:relative;
+width:5vw;
+position:absolute;
 background-size: contain;
-margin: 1%;
+margin: 0.6%;
+top: 2%;
 }
 
 .hidden {
@@ -75,19 +81,22 @@ margin: 1%;
 }
 
 .human{
-width:6vw;
+width:5vw;
 height:7vh;
 position: absolute;
-margin: auto;
+margin: 0.6%;
+top: 2%;
 left: 30%;
 top: 1%;
 background-size: contain;
 background-image: url("./Human.gif");
 background-repeat: no-repeat;
+z-index: 1;
 }
 
 .modal-start{
-  background-color: black;
+  /* background-color: black; */
+  background-image: url("./squarestone.jpg");
   color:green;
   border: orange solid 5px;
   position: absolute;
