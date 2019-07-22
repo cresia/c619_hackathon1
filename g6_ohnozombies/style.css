@@ -1,16 +1,15 @@
 body{
-  background-image: url("https://ak6.picdn.net/shutterstock/videos/30577486/thumb/1.jpg");
+  background-image:url("./ZombieBackground.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  margin-left: 3.5%;
+  margin-top:2.3%;
 }
-
-
-
 aside {
   display: inline-block;
-  vertical-align: top;
+  float: right;
+  margin-right: 10%;
 }
-
 .sideList{
   border: solid orange 4px;
   padding: 2%;
@@ -19,172 +18,146 @@ aside {
   text-align: center;
   margin-top:20%;
   margin-left:10%;
-
 }
-
-
-
 .dice{
- background-color: black;
+  background-color: rgb(7, 0, 6);
   border: none;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 4px 3px;
   cursor: pointer;
-
-
 }
-
-
 .box{
-  /* border: solid black 1px; */
   padding: 5%;
   margin-bottom: 5%;
   margin-right:3%;
-  background-color:lightskyblue;
-  opacity: 0.8;
+  background-image: url("./aside11.gif");
+  /* background-color:pink; */
+  /* opacity: 0.8; */
   margin-left:2%;
-
+  color:green;
 }
 
+.zombie{
+width:5vw;
+height:7vh;
+position: absolute;
+margin: 0.6%;
+top: 2%;
+left: 30%;
+top: 1%;
+background-size: contain;
+background-image: url("./Zombie.gif");
+background-repeat: no-repeat;
+z-index: 3;
+visibility: hidden;
+}
 
-
-.mainBox{
-
+.gridBox{
 display: inline-block;
 height:7vh;
-width:6vw;
-/* background-color:orange; */
-background-image: url("https://img1.picmix.com/output/stamp/normal/3/6/7/6/1186763_10d73.gif");
-margin-top:2%;
-margin-left: 1%;
-position:relative;
-
+width:5vw;
+position: relative;
+background-size: contain;
+margin: 0.6%;
+top: 2%;
+background-image: url("./squarestone.jpg");
 }
 
-
-.mainCards{
-  /* border: solid black 1px; */
-  padding: 3%;
-  width: 65vw;
-  height: 20%;
-  display: inline-block;
-  margin-left:3%;
-
-}
-
-
-.card{
+.location{
+/* background-image: url("./squarestone.jpg"); */
 display: inline-block;
 height:7vh;
-width:6vw;
-/* background-color:brown; */
-background-image: url("https://media.giphy.com/media/uxNh6BemigCHu/giphy.gif");
-
-margin-top:2%;
-margin-left: 1%;
-position:relative;
-border-radius: 50%;
-
-/* margin-right:15px; */
+width:5vw;
+position:absolute;
+background-size: contain;
+margin: 0.6%;
+top: 2%;
 }
-.hiddenCard{
-visibility:hidden;
+
+.hidden {
+  visibility: hidden;
 }
 
 .human{
-width:60px;
-height:50px;
+width:5vw;
+height:7vh;
 position: absolute;
-margin: auto;
-left: 40%;
-top: 20%;
+margin: 0.6%;
+top: 2%;
+left: 30%;
+top: 1%;
 background-size: contain;
-/* z-index: 1; */
-/* display: inline; */
-background-image: url("https://thumbs.gfycat.com/BigheartedTanHairstreak-small.gif");
+background-image: url("./Human.gif");
 background-repeat: no-repeat;
+z-index: 1;
+}
 
+.modal-start{
+  /* background-color: black; */
+  background-image: url("./modal1.jpg");
+  color:green;
+  border: orange solid 5px;
+  position: absolute;
+  display: inline-block;
+  width: 56%;
+  height:58%;
+  z-index: 5;
+  font-size: 25px;
+  margin-top: 10%;
+  margin-left: 6.5%;
 
 }
 
-.human2{
-width:60px;
-height:60px;
-left: 1%;
-top: 8%;
-position: absolute;
-margin: auto;
-background-size: contain;
-background-image: url("https://www.dullmensclub.com/new/wp-content/uploads/2018/12/8iGb9kxrT.gif");
+.modalText{
+  margin-left:2%;
+  margin-top:2%;
+}
 
+
+#closeModal{
+  width: 20%;
+  height: 30%;
+  margin-left:40%;
+  margin-top:2.5%;
+}
+
+
+
+h1 {
+  color: rgb(122, 201, 129);
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.text1{
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+.text2{
+  color: white;
+  font-size: 30px;
 }
 
 .allButtons{
   margin-left:10%;
   margin-top: 5%;
   font-weight: bold;
-  width: 10%;
+  width: 20%;
   background-color: lightgoldenrodyellow;
   border:solid darkred 4px;
-
 }
 
-
-.zombie1{
-width:60px;
-height:60px;
-position: absolute;
-margin: auto;
-left: 20%;
-top: 1%;
-background-size: contain;
-}
-
-.zombie2{
-width:60px;
-height:60px;
-position: absolute;
-margin: auto;
-left: 15%;
-top: 2%;
-background-size: contain;
-}
-
-.zombie3{
-width:70px;
-height:65px;
-position: absolute;
-margin: auto;
-left: 15%;
-top: 0.3%;
-background-size: contain;
-}
-
-
-#randomNum {
-  position:relative;
-}
-
-
-h1{
-  color: white;
-}
-
-.battery{
-width:80px;
-height:50px;
-position: absolute;
-margin: auto;
-left: 10%;
-top: 10%;
-background-size: contain;
-background-image: url("https://www.pinclipart.com/picdir/middle/409-4090619_theres-a-good-reason-we-keep-our-remote.png");
-background-repeat: no-repeat;
-
-
+.battery {
+  background-image: url("./battery.jpg");
+  background-size: 35px;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: contain;
 }
