@@ -66,6 +66,16 @@ background-size: contain;
 margin: 0.6%;
 top: 2%;
 background-image: url("./squarestone.jpg");
+
+}
+
+#houseCorner{
+  background-image: url("./house.jpg");
+
+}
+
+#origin{
+  background-image: url("./origin2.jpg")
 }
 
 .location{
