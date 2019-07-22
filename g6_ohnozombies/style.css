@@ -15,6 +15,7 @@ aside {
   padding: 2%;
   display: inline-block;
   width: 20vw;
+  height: 35vw;
   text-align: center;
   margin-top:20%;
   margin-left:10%;
@@ -46,9 +47,7 @@ aside {
 width:5vw;
 height:7vh;
 position: absolute;
-margin: 0.6%;
-top: 2%;
-left: 30%;
+left: 15%;
 top: 1%;
 background-size: contain;
 background-image: url("./Zombie.gif");
@@ -97,9 +96,9 @@ top: 2%;
 width:5vw;
 height:7vh;
 position: absolute;
-margin: 0.6%;
-top: 2%;
-left: 30%;
+/* margin: 0.6%; */
+/* top: 2%; */
+left: 8%;
 top: 1%;
 background-size: contain;
 background-image: url("./Human.gif");
@@ -118,7 +117,7 @@ z-index: 1;
   height:58%;
   z-index: 5;
   font-size: 25px;
-  margin-top: 10%;
+  margin-top: 5.3%;
   margin-left: 6.5%;
 
 }
@@ -156,12 +155,13 @@ h1 {
 }
 
 .allButtons{
-  margin-left:10%;
+  margin-left:2%;
   margin-top: 5%;
   font-weight: bold;
-  width: 20%;
+  font-size:105%;
+  width: 25%;
   background-color: lightgoldenrodyellow;
-  border:solid darkred 4px;
+  border:solid darkred 5px;
 }
 
 .battery {
