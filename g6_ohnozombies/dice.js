@@ -9,4 +9,5 @@ class Zdice {
     var setZombieNum = $("#randomNum").text(random)
     $("#randomNum").append(setZombieNum);
   }
+
 }

@@ -7,5 +7,6 @@ class Human {
     this.buttonMoveDown = $("#moveDown");
     this.buttonMoveLeft = $("#moveLeft");
     this.buttonMoveRight = $("#moveRight");
+    
   }
 }
