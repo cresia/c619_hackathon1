@@ -126,7 +126,13 @@ function initializeApp() {
     if (battery.length === 4 && originCheck === true) {
 
       $(".modal-start").text("You survived the zombies!").css({ "font-size": "50px", "font-weight": "bold", "text-align": "center", "height": "20%" }).show();
+
+      player.buttonMoveRight.off();
+      player.buttonMoveLeft.off();
+      player.buttonMoveDown.off();
+      player.buttonMoveUp.off();
     }
+
   }
 
   function checkBattery() {
