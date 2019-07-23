@@ -14,10 +14,12 @@ function initializeApp() {
   mainCards.append(player.buttonMoveRight);
 
   $("[yco='" + playerLocation.xco + "'][xco='" + playerLocation.xco + "']").addClass("human");
+
   player.buttonMoveRight.click(moveRight);
   player.buttonMoveLeft.click(moveLeft);
   player.buttonMoveDown.click(moveDown);
   player.buttonMoveUp.click(moveUp);
+
 
   function closeModal() {
     var modalAndButton = $("#startGame")
